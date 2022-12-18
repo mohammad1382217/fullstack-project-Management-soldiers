@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/SHI_LERA GROP.png" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/jalalidatepicker.min.css">
+    <link rel="stylesheet" href="css/bookshelf.css">
+    <link rel="stylesheet" href="css/compani-visits.css">
+    <title>TAHLIL | عزیزی</title>
+</head>
+
+<body>
+    <button type="button" class="close-menu" id="menuClose"></button>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <i class="fa-solid fa-bars" id="addMenu"></i>
+            <span>عزیزی</span>
+        </div>
+        <div class="navbar-container">
+            <img src="img/SHI_LERA GROP.png" alt="LOGO">
+        </div>
+    </nav>
+
+    <div class="hamburger-menu" id="menu">
+        <ul>
+            <a href="./visitor-panel.html">
+                <li><i class="fa-solid fa-home"></i>لیست فروشگاه</li>
+            </a>
+            <a href="./add-compani.html">
+                <li><i class="fa-solid fa-plus"></i>افزودن فروشگاه</li>
+            </a>
+            <a href="./create-basket.html">
+                <li><i class="fa-solid fa-basket-shopping"></i>ایجاد سبد</li>
+            </a>
+            <a href="./add-item.html">
+                <li><i class="fa-solid fa-plus-square"></i>افزودن کالا</li>
+            </a>
+            <a href="./setting.html">
+                <li><i class="fa-solid fa-gear"></i>تنظیمات</li>
+            </a>
+            <a href="./connect.html">
+                <li><i class="fa-solid fa-phone"></i>ارتباط با ما</li>
+            </a>
+            <a href="./about.html">
+                <li><i class="fa-solid fa-info"></i>درباره</li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="line-under">
+
+        <div class="d-flex flex-wrap align-items-center m-3 ">
+            <button type="button" class="Enter creat-factor " id="Create">سفارش گیری</button>
+
+        </div>
+
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 d-flex flex-wrap align-items-center justify-content-start text-center my-2">
+                    <select class="item-filter " id="buyer-code-filter">
+                        <option value="" disabled selected>-- انتخاب مشتری --</option>
+                        <option value="100222">داروخانه شماره 1</option>
+                        <option value="100333">داروخانه شماره 2</option>
+                        <option value="100444">داروخانه شماره 3</option>
+                        <option value="100555">داروخانه شماره 4</option>
+                        <option value="100666">داروخانه شماره 5</option>
+                        <option value="100777">داروخانه شماره 6</option>
+                        <option value="100888">داروخانه شماره 7</option>
+                        <option value="100999">داروخانه شماره 8</option>
+                        <option value="200111">داروخانه شماره 9</option>
+                        <option value="200222">داروخانه شماره 10</option>
+                    </select>
+                    <input class="ms-2 my-2 " id="buyer-code" type="text" disabled value="">
+                    <input class="ms-2 my-2" id="buyer-name" type="text" disabled value="">
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid mt-2">
+            <div class="row">
+                <div class="add-filter d-flex flex-wrap align-items-center">
+                    <select class="filters item-filter mt-3" id="factor-filter">
+                        <option value="0" disabled selected>-- افزودن فیلتر--</option>
+                        <option id="op1" value="1">تسویه</option>
+                        <option id="op2" value="2">فاکتور باز</option>
+                        <option id="op3" value="3">نیم پرداختی</option>
+                        <option id="op4" value="4">برگشت از توضیع</option>
+                        <option id="op5" value="5">مرجوعی</option>
+                        <option id="op6" value="6">فروش سال قبل</option>
+                        <option id="op7" value="7">فروش امسال</option>
+                    </select>
+                    <input data-jdp class="border-outline mx-1 text-center" id="date" value="">
+                    <button type="button" class="Enter set-filter ">اعمال فیلتر</button>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid mt-2">
+            <div class="row">
+                <div class="filters d-flex mx-100 flex-wrap">
+                    <span id="over" class="ms-2 mt-3 over hide1">تسویه</span>
+                    <span id="open" class="ms-2 mt-3 open hide2">فاکتور باز</span>
+                    <span id="half-open" class="ms-2 mt-3 half-open hide3">نیم پرداختی</span>
+                    <span id="dont-need" class="ms-2 mt-3 dont-need hide4">برگشت از توضیع</span>
+                    <span id="backed" class="ms-2 mt-3 backed hide5">مرجوعی</span>
+                    <span id="LastYear" class="ms-2 mt-3 last-year hide6">فروش سال قبل</span>
+                    <span id="ThisYear" class="ms-2 mt-3 this-year hide7">فروش امسال</span>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <section>
+        <div class="compani-visit">
+            <table>
+                <thead class="thead">
+                    <tr class="tr">
+                        <th class="th"><input type="checkbox" name="" id=""></th>
+                        <th class="th">ردیف</th>
+                        <th class="th">نام شرکت</th>
+                        <th class="th">نام فروشگاه</th>
+                        <th class="th">وضعیت</th>
+                        <th class="th">نوع سند</th>
+                        <th class="th">تاریخ</th>
+                        <th class="th">بدهکاری</th>
+                        <th class="th">بستانکاری</th>
+                        <th class="th">شماره</th>
+                        <th class="th">سر رسید</th>
+                        <th class="th">مانده فاکتور</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="tr">
+                        <th class="th"><input type="checkbox" name="" id=""></th>
+                        <th class="th">1</th>
+                        <th class="th">عزیزی</th>
+                        <th class="th">داروخانه شماره 2</th>
+                        <th class="th">تسویه</th>
+                        <th class="th">فروش امسال</th>
+                        <th class="th">1401/05/12</th>
+                        <th class="th">0</th>
+                        <th class="th">1,000,000(تومان)</th>
+                        <th class="th"></th>
+                        <th class="th">1402/05/10</th>
+                        <th class="th">0</th>
+                    </tr>
+
+                    <tr class="tr">
+                        <th class="th"><input type="checkbox" name="" id=""></th>
+                        <th class="th">2</th>
+                        <th class="th">عزیزی</th>
+                        <th class="th">داروخانه شماره 10</th>
+                        <th class="th">فاکتور باز</th>
+                        <th class="th">فروش سال قبل</th>
+                        <th class="th">1400/12/08</th>
+                        <th class="th">600,000(تومان)</th>
+                        <th class="th">0</th>
+                        <th class="th"></th>
+                        <th class="th">1401/03/08</th>
+                        <th class="th">600,000(تومان)</th>
+                    </tr>
+
+                    <tr class="tr">
+                        <th class="th"><input type="checkbox" name="" id=""></th>
+                        <th class="th">3</th>
+                        <th class="th">عزیزی</th>
+                        <th class="th">داروخانه شماره 10</th>
+                        <th class="th">فاکتور باز</th>
+                        <th class="th">فروش سال قبل</th>
+                        <th class="th">1400/12/08</th>
+                        <th class="th">600,000(تومان)</th>
+                        <th class="th">0</th>
+                        <th class="th"></th>
+                        <th class="th">1401/03/08</th>
+                        <th class="th">600,000(تومان)</th>
+                    </tr>
+
+                    <tr class="tr">
+                        <th class="th"><input type="checkbox" name="" id=""></th>
+                        <th class="th">4</th>
+                        <th class="th">عزیزی</th>
+                        <th class="th">داروخانه شماره 10</th>
+                        <th class="th">فاکتور باز</th>
+                        <th class="th">فروش سال قبل</th>
+                        <th class="th">1400/12/08</th>
+                        <th class="th">600,000(تومان)</th>
+                        <th class="th">0</th>
+                        <th class="th"></th>
+                        <th class="th">1401/03/08</th>
+                        <th class="th">600,000(تومان)</th>
+                    </tr>
+
+                    <tr class="tr">
+                        <th class="th"><input type="checkbox" name="" id=""></th>
+                        <th class="th">5</th>
+                        <th class="th">عزیزی</th>
+                        <th class="th">داروخانه شماره 10</th>
+                        <th class="th">فاکتور باز</th>
+                        <th class="th">فروش سال قبل</th>
+                        <th class="th">1400/12/08</th>
+                        <th class="th">600,000(تومان)</th>
+                        <th class="th">0</th>
+                        <th class="th"></th>
+                        <th class="th">1401/03/08</th>
+                        <th class="th">600,000(تومان)</th>
+                    </tr>
+
+                    <tr class="tr">
+                        <th class="th"><input type="checkbox" name="" id=""></th>
+                        <th class="th">6</th>
+                        <th class="th">عزیزی</th>
+                        <th class="th">داروخانه شماره 10</th>
+                        <th class="th">فاکتور باز</th>
+                        <th class="th">فروش سال قبل</th>
+                        <th class="th">1400/12/08</th>
+                        <th class="th">600,000(تومان)</th>
+                        <th class="th">0</th>
+                        <th class="th"></th>
+                        <th class="th">1401/03/08</th>
+                        <th class="th">600,000(تومان)</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+    <script src="js/compani-visits.js"></script>
+    <script src="js/All.js"></script>
+    <script src="./js/jalalidatepicker.min.js"></script>
+    <script>jalaliDatepicker.startWatch();</script>
+</body>
+
+</html>

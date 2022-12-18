@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bookshelf.css">
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/SHI_LERA GROP.png" />
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="Effect"></button>
+    <button type="button" class="close-menu" id="menuClose"></button>
+    <header>
+        <nav class="navbar d-flex align-items-center">
+            <div id="rightNav" class="navbar-container">
+                <i class="fa-solid fa-bars me-3 margin-top" id="addMenu"></i>
+                <span>سفارش</span>
+            </div>
+            <div class="navbar-container">
+                <img src="img/SHI_LERA GROP.png" alt="LOGO">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="header-bottom">
+            <section class="formColor mt-1">
+                <div id="btns" class="row mx-1 align-item-center d-flex flex-row justify-content-evenly">
+                    <button class="btn btn-darkcyan m-1 wh" onclick="showProduct()" type="button">محصولات</button>
+                    <button id="deleteAllBtn" class="btn btn-danger m-1 wh" onclick="deleteall()" type="button">حذف همه</button>
+                </div>
+            </section>
+            <section class="formColor mt-1">
+                <div class="row">
+                    <div
+                        class="p-1 d-flex align-items-center justify-content-center col-6 col-md-3 my-2 p-1 text-center">
+                        <div class="col">
+                            شركت پخش بهداشت سلامت عزیزی
+                        </div>
+                    </div>
+                    <div
+                        class="p-1 d-flex align-items-center justify-content-center col-6 col-md-3 my-2 p-1 text-center">
+                        <div>
+                            فاكس : 88853381
+                        </div>
+                    </div>
+                    <div
+                        class="p-1 d-flex align-items-center justify-content-center col-6 col-md-3 my-2 p-1 text-center">
+                        <div>
+                            شناسه ملی : 14015522333
+                        </div>
+                    </div>
+                    <div
+                        class="p-1 d-flex align-items-center justify-content-center col-6 col-md-3 bg-light my-2 p-1 text-center">
+                        <div>
+                            شناسه اقتصادی : 358742665
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container-fluid mt-1 formColor">
+                <div class="row">
+                    <div class="col-4">
+                        <input class="input my-2 text-center" type="text" id="person-name" placeholder="نام مرکز" />
+                    </div>
+                    <div class="col-4">
+                        <input class="input my-2 text-center" type="text" id="buyer-code" placeholder="کد مشتری" />
+                    </div>
+                    <div class="col-4">
+                        <input class="input my-2 text-center" type="text" id="buyer-number"
+                            placeholder="شماره اقتصادی" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <input class="input my-2 text-center" type="text" id="buyer-post" placeholder="کدپستی" />
+                    </div>
+                    <div class="col-4">
+                        <input class="input my-2 text-center" type="text" id="buyer-national"
+                            placeholder="شماره ثبت/ملی" />
+                    </div>
+                    <div class="col-4">
+                        <input class="input my-2 text-center" type="text" id="buyer-phone" placeholder="تلفن" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input class="input my-2 text-center" type="text" id="address" placeholder="نشانی" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-12">
+                        <select class="input my-2" aria-label="Default select example">
+                            <option disabled selected>نوع فاكتور فروش</option>
+                            <option value="1">پيش فاكتور</option>
+                            <option value="2">رسمی</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4 col-6">
+                        <select class="input my-2" aria-label="Default select example">
+                            <option disabled selected>شرح وضعیت</option>
+                            <option value="1">فروش</option>
+                            <option value="2">بازگشتی</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4 col-6">
+                        <select class="input my-2" aria-label="Default select example">
+                            <option disabled selected>نوع فروش</option>
+                            <option value="1">ضایعات</option>
+                            <option value="2">عادی</option>
+                            <option value="3">امانی</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <section>
+            <div class="container-fluid table-responsive d-flex flex-column mt-2 p-0 rounded formColor">
+                <table id="visitor-table"
+                    class="table table-bordered border-dark table-striped align-middle text-center">
+                    <thead class="align-middle">
+                        <tr>
+                            <th scope="col">ردیف</th>
+                            <th scope="col">نام کالا</th>
+                            <th scope="col">شرح کالا</th>
+                            <th scope="col">تعداد</th>
+                            <th scope="col">مبلغ واحد</th>
+                            <th scope="col">مبلغ کل</th>
+                            <th scope="col"> تخفیف</th>
+                            <th scope="col">مبلغ کل با تخفیف</th>
+                            <th scope="col">مبلغ کل با مالیات</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="formColor">
+            <div class="d-flex flex-column align-items-center">
+                <div id="sumBox" class="d-flex flex-column w-100 rounded bg-sumBox mt-3 formColor">
+                    <div id="sumOfProduct" class="d-flex flex-row justify-content-between mt-1 fs-6 fw-bolder"
+                        style="color:green;">
+                        <i class="p-1 m-2">جمع كل</i><i id="sumProduct" class="p-1 m-2">0</i>
+                    </div>
+                    <div id="sumOfDiscount" class="d-flex flex-row justify-content-between mt-1 fs-6 fw-bolder "
+                        style="color:red;">
+                        <i class="p-1 m-2">جمع كل تخفيفات</i><i id="sumDiscount" class="p-1 m-2">0</i>
+                    </div>
+                    <div id="sumOfTotal" class="d-flex flex-row justify-content-between mt-1 fs-6 fw-bolder">
+                        <i class="p-1 m-2">خالص پرداختی</i><i id="payClean" class="p-1 m-2">0</i>
+                    </div>
+                </div>
+                <div id="btnBox" class="h-100 d-flex flex-row align-items-center w-100 m-4">
+                    <button id="description" class="Enter btn-darkcyan w-100 m-3">شرح فاکتور</button>
+                    <button id="pay" class="Enter btn-darkcyan w-100 m-3">پرداخت</button>
+                    <button id="excel" class="Enter btn-darkcyan w-100 m-3">دانلود فایل</button>
+                </div>
+            </div>
+        </section>
+        <div class="productbox d-flex flex-column bg-darkcyan shopBoxColor">
+            <!-- selectbox -->
+            <select class="form-select position" aria-label="Default select example">
+                <option disabled selected>انتخاب محصول</option>
+                <option value="1">سرنگ</option>
+                <option value="2">ارایشی بهداشتی</option>
+                <option value="3">دارویی</option>
+            </select>
+            <!-- card product -->
+            <div id="cart1">
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5">سرنگ لوئر لاک (سه تکه)</h4>
+                <div id="card-1" class="row flex-nowrap scroll my-1"></div>
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5"> سرنگ لوئر اسلیپ (سه تکه) </h4>
+                <div id="card-2" class="row flex-nowrap scroll my-1"></div>
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5"> سرنگ انسولین (یکپارچه) </h4>
+                <div id="card-3" class="row flex-nowrap scroll my-1"></div>
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5"> سر سوزن پزشکی </h4>
+                <div id="card-4" class="row flex-nowrap scroll my-1"></div>
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5"> سر سوزن پن انسولین </h4>
+                <div id="card-5" class="row flex-nowrap scroll my-1"></div>
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5"> سایر اقلام </h4>
+                <div id="card-6" class="row flex-nowrap scroll my-1"></div>
+            </div>
+            <div id="cart2">
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5">آرایشی بهداشتی</h4>
+                <div id="card-7" class="row flex-nowrap scroll"></div>
+            </div>
+            <div id="cart3">
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5">دارویی</h4>
+                <div id="card-8" class="row flex-nowrap scroll"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="hamburger-menu" id="menu">
+        <ul>
+            <a href="./visitor-panel.html">
+                <li><i class="fa-solid fa-home"></i>لیست فروشگاه</li>
+            </a>
+            <a href="./add-compani.html">
+                <li><i class="fa-solid fa-plus"></i>افزودن فروشگاه</li>
+            </a>
+            <a href="./create-basket.html">
+                <li><i class="fa-solid fa-basket-shopping"></i>ایجاد سبد</li>
+            </a>
+            <a href="./add-item.html">
+                <li><i class="fa-solid fa-plus-square"></i>افزودن کالا</li>
+            </a>
+            <a href="./setting.html">
+                <li><i class="fa-solid fa-gear"></i>تنظیمات</li>
+            </a>
+            <a href="./connect.html">
+                <li><i class="fa-solid fa-phone"></i>ارتباط با ما</li>
+            </a>
+            <a href="./about.html">
+                <li><i class="fa-solid fa-info"></i>درباره</li>
+            </a>
+        </ul>
+    </div>
+
+    <script src="js/All.js"></script>
+    <script src="js/get-visit.js"></script>
+    <script src="js/xlsx.full.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/SHI_LERA GROP.png" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/bookshelf.css">
+    <link rel="stylesheet" href="css/add-compani.css">
+    <link rel="stylesheet" href="css/all.min.css" />
+    <title>TAHLIL | ایجاد سبد</title>
+</head>
+
+<body>
+
+    <button type="button" class="close-menu" id="menuClose"></button>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <i class="fa-solid fa-bars" id="addMenu"></i>
+            <span>ایجاد سبد</span>
+        </div>
+        <div class="navbar-container">
+            <img src="img/SHI_LERA GROP.png" alt="LOGO">
+        </div>
+    </nav>
+
+    <section class="add-basket">
+
+
+        <div class="new-compani">
+
+            <p class="Newitem">ایجاد سبد</p>
+            <br>
+
+            <select id="company-name" class="item-filter"> 
+                <option value="">---نام شرکت---</option>
+                <option value="Avandfar">آوندفر</option> 
+                <option value="Clatos">کلاتوس</option> 
+                <option value="Ariiana">آرییانا</option>
+                <option value="Shilra">شیلرا</option>
+            </select>
+
+            <input id="product-name" class="input item-data" type="text" placeholder="نام  کالا">
+            <input id="product-desc" class="input item-data" type="text" placeholder="شرح کالا">
+            <input id="product-code" class="input item-data" type="text" placeholder="کد کالا">
+            <input id="product-count" class="input item-data" type="text" placeholder="تعداد کالا">
+            <input id="product-price" class="input item-data" type="text" placeholder="قیمت کالا(ریال)">
+
+            <input id="product-totalprice" class="input item-data" type="text" placeholder="قیمت کل سبد(ریال)">
+
+            <select id="gift-name" class="item-filter">
+                <option value="">---هدیه در صورت خرید سبد---</option>
+                <option value="ansolin">پک ده تایی انسولین</option>
+                <option value="pomad">پوماد ضد افتاب صد تایی</option>
+                <option value="bandazh">بانداژ سوختگی</option>
+                <option value="sorang">سرنگ 10 cc</option>
+                <option value=""></option>
+            </select>
+
+            <input id="gift-count" class="input item-data" type="text" placeholder="تعداد هدیه">
+            <input id="product-discount" class="input item-data" type="text" placeholder="تخفیف در صورت خرید سبد(ریال)">
+
+            <div class="line-flex">
+                <button class="Enter submit" id="addProduct" type="submit">افزودن کالا</button>
+                <button class="Enter submit" id="saveBasket" type="submit">ذخیره سبد</button>
+            </div>
+
+        </div>
+
+        <div class="table">
+            <table id="tblData">
+                <thead class="thead">
+                    <tr class="tr">
+                        <th class="th">ردیف</th>
+                        <th class="th">نام شرکت</th>
+                        <th class="th">نام کالا</th>
+                        <th class="th">شرح کالا</th>
+                        <th class="th">کد کالا</th>
+                        <th class="th">تعداد کالا</th>
+                        <th class="th">مبلغ واحد</th>
+                        <th class="th">مبلغ کل</th>
+                        <th class="th">نام هدیه</th>
+                        <th class="th">تعداد هدیه</th>
+                        <th class="th">تخفیف</th>
+                        <th class="th">مبلغ کل با تخفیف</th>
+                    </tr>
+                </thead>
+
+                <tbody class="tbody" id="tbody"></tbody>
+
+            </table>
+        </div>
+
+
+    </section>
+
+    <div class="hamburger-menu" id="menu">
+        <ul>
+            <a href="./visitor-panel.html">
+                <li><i class="fa-solid fa-home"></i>لیست فروشگاه</li>
+            </a>
+            <a href="./add-compani.html">
+                <li><i class="fa-solid fa-plus"></i>افزودن فروشگاه</li>
+            </a>
+            <a href="./create-basket.html">
+                <li><i class="fa-solid fa-basket-shopping"></i>ایجاد سبد</li>
+            </a>
+            <a href="./add-item.html">
+                <li><i class="fa-solid fa-plus-square"></i>افزودن کالا</li>
+            </a>
+            <a href="./setting.html">
+                <li><i class="fa-solid fa-gear"></i>تنظیمات</li>
+            </a>
+            <a href="./connect.html">
+                <li><i class="fa-solid fa-phone"></i>ارتباط با ما</li>
+            </a>
+            <a href="./about.html">
+                <li><i class="fa-solid fa-info"></i>درباره</li>
+            </a>
+        </ul>
+    </div>
+
+    <script src="js/All.js"></script>
+    <script src="js/create-basket.js"></script>
+</body>
+
+</html>

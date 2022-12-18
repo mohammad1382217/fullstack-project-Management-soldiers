@@ -1,0 +1,134 @@
+.filter-bar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    padding-bottom: 10px;
+    border-bottom:solid rgb(112, 110, 110) 1.5px;
+}
+
+.item-filter{
+    width: auto;
+    height: 30px;
+    border-radius: 5px;
+    border:solid rgb(175, 170, 170) 1px;
+    outline: none;
+    color:rgb(92, 89, 89) ;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.account{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.line-under{
+    padding-bottom: 20px;
+    border-bottom: solid rgb(158, 158, 158) 1px;
+}
+
+.filters span{
+    justify-content: center;
+    display: flex;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    border-radius: 13px;
+    
+    border: solid red 2px;
+    background-color: rgb(238, 159, 159);
+}
+
+.filters .over{
+    border: solid rgb(3, 70, 20) 2px;
+    background-color: rgb(112, 170, 136);
+}
+
+.filters .open{
+    border: solid red 2px;
+    background-color: rgb(238, 159, 159);
+}
+
+.filters .half-open{
+    border: solid rgb(205, 214, 82) 2px;
+    background-color: rgb(227, 231, 187);
+}
+
+.filters .backed{
+    border: solid rgb(255, 166, 0) 2px;
+    background-color: rgb(238, 210, 159);
+}
+
+.filters .dont-need{
+    border: solid rgb(202, 113, 180) 2px;
+    background-color: rgb(221, 166, 216);
+}
+
+.filters .last-year{
+    border: solid rgb(74, 151, 238) 2px;
+    background-color: rgb(142, 162, 248);
+}
+
+.filters .this-year{
+    border: solid rgb(113, 196, 202) 2px;
+    background-color: rgb(166, 204, 221);
+}
+
+.hide1 , .hide2 , .hide3 , .hide4 , .hide5, .hide6, .hide7{
+    display: none !important;
+}
+.creat-factor , .set-filter{
+    align-items: center;
+    display: flex;
+    justify-content:center;
+    width: 9.375rem;
+    height: 35px;
+    margin: 15px 0px 0px 15px;
+}
+.set-filter{
+    background-image: none;
+    background-color: rgb(136, 218, 200)!important;
+}
+
+
+table{
+    width: 100%;
+    border-collapse:collapse;
+}
+thead{
+    background-color: #1eeca8;
+}
+th, td {
+    border-bottom:solid rgb(255, 255, 255) 0.5rem;
+    border-left:  solid rgb(34, 33, 33) .2px;
+    border-right: solid rgb(34, 33, 33) .2px;
+}    
+th, td , tr {
+    padding: 8px;
+    background-color: rgb(139, 219, 224)!important;
+}
+th
+{
+    background-color: #1eeca8;
+}
+
+.compani-visit{
+    direction: rtl;
+    overflow-x: auto;
+    margin: 30px 20px;
+}
+
+.border-outline{
+    direction: ltr;
+    outline: none;
+    width: 150px;
+    padding: 4px;
+    border-radius: 5px;
+    border:solid rgb(192, 194, 194) 1.5px;
+    background-color: #9ef0d5;
+    margin: 15px 0px 0px 15px;
+}

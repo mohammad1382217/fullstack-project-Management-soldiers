@@ -1,0 +1,59 @@
+
+.login-container{
+    direction: rtl;
+    max-width: 300px;
+    min-width: 10%;
+    height: auto;
+    position: relative;
+    margin: 50px auto ;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.2rem;
+    border:  var(--border-color) solid 1px;
+    box-shadow: 0px 0px 8px black;
+}
+
+.fa-regular{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    color: white;
+    font-size: var(--font-size);
+    background-image: var(--navbar-backgraund-theme-color);
+    padding-top: 20px;
+}
+.email-container , .password-container , .show-password-container{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin: 10px;
+}
+
+.show-pass{
+    position: absolute;
+    left: 25px;
+    margin-top: 30px;
+}
+#show-password{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+#telegram:hover{
+    color:#0088CC ;
+    cursor: pointer;
+}
+
+#youtube:hover{
+    color:#CD201F;
+    cursor: pointer;
+}
+
+#instagram:hover{
+    color:#E1306C;
+    cursor: pointer;
+}

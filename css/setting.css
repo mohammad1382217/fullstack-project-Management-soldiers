@@ -1,0 +1,31 @@
+.visitor-account{
+    font-family: 'Byekan';
+    position: relative;
+    direction: rtl;
+    margin: 30px auto;
+    width:  85%;
+    height: 370px;
+    border:solid rgb(175, 170, 170) 1px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px black;
+}
+.visitor-account .fa-solid{
+    font-size: 1.5rem;
+}
+.see-account{
+    background-color: rgb(115, 230, 195);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: solid rgb(175, 170, 170) 1px;
+}
+
+.Dashboard{
+    padding: 10px;
+    border-bottom: solid rgb(175, 170, 170) 1px;
+    cursor: pointer;
+}
+.Dashboard:hover:not(.donthover){
+    transition: .2s;
+    background-color: rgb(228, 233, 231);
+}
