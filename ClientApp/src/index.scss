@@ -1,0 +1,117 @@
+@import "font";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family-shabnam;
+}
+
+ul li , label{
+  user-select: none;
+}
+
+.rmdp-button{
+  margin: 1rem 0.5rem;
+}
+
+th,td{
+  text-align: center;
+  width: fit-content;
+}
+
+td{
+  height: 3.6rem;
+  background-color: white;
+}
+
+.sidebar-overley{
+  background-color: rgba(0,0,0,.1);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar > .container-fluid
+{
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-fluid{
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  margin-right: calc(-.5 * var(--bs-gutter-x))
+}
+
+.row>* {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  margin-top: var(--bs-gutter-y)
+}
+
+@media (min-width: 576px) {};
+@media (min-width: 768px) {};
+@media (min-width: 992px) {};
+@media (min-width: 1200px) {};
+@media (min-width: 1400px) {};
+
+@media print {
+  header,div.flex,button{
+    display: none;
+  }
+  div.mr-64{
+    margin:0
+  }
+  body *{
+    visibility: hidden;
+  }
+  #print,#print *{
+    visibility: visible;
+    color: black;
+    font-size: 0.75rem;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    select{
+      appearance: none;
+      padding: 0 0.1rem !important;
+    }
+    th{
+      margin:0;
+    }
+    input{
+      border: none;
+      outline: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
