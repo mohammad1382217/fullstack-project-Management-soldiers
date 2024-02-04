@@ -36,7 +36,7 @@ customer_management_system
 ```
 **Run Project**
 ```bash
-cd customer_management_system
+cd Soldier_Management_system
 
 npm install
 
